@@ -1,0 +1,30 @@
+{include file='common/layout'}
+<table id="a">
+    <th style="padding-right: 100px">编号</th>
+    <th style="padding-right: 100px">订单编号</th>
+    <th style="padding-right: 110px">添加时间</th>
+    <th style="padding-right: 110px">收件人</th>
+    <th style="padding-right: 110px">收件人电话</th>
+    <th style="padding-left: 110px">总金额</th>
+    <th style="padding-right: 110px">状态值</th>
+    <th style="padding-right: 110px">派送状态</th>
+    {volist name='data' id='vo'}
+    <tr>
+
+        <td>{$vo.id}</td>
+        <td>{$vo.order_number}</td>
+        <td>{$vo.order_createtime}</td>
+        <td>{$vo.order_username}</td>
+        <td>{$vo.order_usertel}</td>
+        <td>{$vo.order_amount}</td>
+        <td>{$vo.order_status}</td>
+        <td>{$vo.order_state}</td>
+        <td><a href="{:URL('index/order_delete')}?id={$vo.id}">删除</a></td>
+
+    </tr>
+
+    {/volist}
+
+</table>
+<script src="__STATIC__/jquery-1.10.2.min.js"></script>
+

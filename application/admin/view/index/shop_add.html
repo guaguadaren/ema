@@ -1,0 +1,38 @@
+{include file='common/layout'}
+<form method="post" action="{:URL('index/foot_add')}" enctype="multipart/form-data">
+ <center>
+     <table>
+         <tr>
+             <td>食物名称</td>
+             <td><input type="text" name="foot_name"></td>
+         </tr>
+         <tr>
+             <td>食物价格</td>
+             <td><input type="text" name="foot_price"></td>
+         </tr>
+         <tr>
+             <td>食物促销价</td>
+             <td><input type="text" name="foot_promotion"></td>
+         </tr>
+         <tr>
+             <td>食物头像</td>
+              <td>   <input type="file" name="image"> </td>
+         </tr>
+         <tr>
+             <td>详情</td>
+             <td><textarea name="foot_details" cols="20" role="12">
+
+             </textarea></td>
+         </tr>
+         <tr>
+             <td>
+                 显示<input type="radio" name="isdel" value="0">不显示<input type="radio" name="isdel" value="1">
+
+             </td>
+         </tr>
+         <tr>
+             <td><input type="submit" value="提交"></td>
+         </tr>
+     </table>
+ </center>
+</form>

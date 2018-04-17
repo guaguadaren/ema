@@ -1,0 +1,58 @@
+
+{include file='common/layout'}
+<form method="post" action="{:URL('index/discount_adds')}">
+ <center>
+     <table>
+         <tr>
+             <td>优惠券名称</td>
+             <td><input type="text" name="coupon_name"></td>
+         </tr>
+         <tr>
+             <td>优惠券面额</td>
+             <td><input type="text" name="coupon_money"></td>
+         </tr>
+         <tr>
+             <td>最低消费金额</td>
+             <td><input type="text" name="coupon_smoney"></td>
+         </tr>
+         <tr>
+             <td>优惠活动描述</td>
+             <td><textarea cols="20" name="coupon_des"></textarea></td>
+         </tr>
+         <tr>
+             <td>发送数量</td>
+             <td><input type="text" name="coupon_num"></td>
+         </tr>
+         <tr>
+             <td>开发时间</td>
+             <td><input type="text" name="coupon_starttime" value="" id="datepicker" /></td>
+         </tr>
+         <tr>
+             <td>结束时间</td>
+             <td><input type="text" name="coupon_sendtime" value="" id="datepickers" /></td>
+         </tr>
+         <tr>
+             <td><input type="submit" value="提交"></td>
+         </tr>
+     </table>
+ </center>
+</form>
+<script type="text/javascript" src="__STATIC__/month/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="__STATIC__/month/js/jquery.datePicker-min.js"></script>
+<link type="text/css" href="__STATIC__/month/css/datepicker.css" rel="stylesheet" />
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $(".datepicker").datePicker({
+            inline:true,
+            selectMultiple:false
+        });
+
+        $("#datepicker").datePicker({
+            clickInput:true
+        });
+        $("#datepickers").datePicker({
+            clickInput:true
+        });
+    });
+</script>

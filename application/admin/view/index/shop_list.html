@@ -1,0 +1,38 @@
+{include file='common/layout'}
+<table id="a">
+    <th style="padding-right: 100px">编号</th>
+    <th style="padding-right: 100px">食物名称</th>
+    <th style="padding-right: 110px">食物价格</th>
+    <th style="padding-right: 110px">食物促销价</th>
+    <th style="padding-right: 110px">头像</th>
+    <th style="padding-left: 110px">详情</th>
+    <th style="padding-right: 110px">添加时间</th>
+    <th style="padding-right: 110px">操作</th>
+    {volist name='data' id='vo'}
+    <tr>
+
+        <td>{$vo.id}</td>
+        <td>{$vo.foot_name}</td>
+        <td>{$vo.foot_price}</td>
+        <td>{$vo.foot_promotion}</td>
+        <td> <img width="70px" src="__STATIC__/img/20180416/{$vo.foot_img}" ></td>
+
+
+        <td>{$vo.foot_details}</td>
+        <td>{$vo.createtime}</td>
+        <td><a href="{:URL('index/deletes')}?id={$vo.id}">删除</a></td>
+    </tr>
+
+    {/volist}
+
+</table>
+<!-- basic scripts -->
+
+<!--[if !IE]> -->
+
+
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+
