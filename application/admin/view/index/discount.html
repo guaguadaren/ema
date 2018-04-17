@@ -1,0 +1,32 @@
+
+{include file='common/layout'}
+ <table>
+     <th style="padding-right: 100px" ></th>
+  <th style="padding-right: 100px">优惠券名称</th>
+  <th style="padding-right: 100px">食优惠券面额</th>
+  <th style="padding-right: 110px">最低消费金额</th>
+  <th style="padding-right: 110px">优惠活动描述</th>
+  <th style="padding-right: 110px">发放数量</th>
+  <th style="padding-right: 110px">开始时间</th>
+  <th style="padding-right: 110px">结束时间</th>
+  <th style="padding-right: 110px">创建时间</th>
+  <!--<th style="padding-right: 110px">操作</th>-->
+
+   {volist name="data" id="vo"}
+<tr>
+    <td>{$vo.id}</td>
+    <td>{$vo.coupon_name}</td>
+    <td>{$vo.coupon_money}</td>
+    <td>{$vo.coupon_smoney}</td>
+    <td>{$vo.coupon_des}</td>
+    <td>{$vo.coupon_num}</td>
+    <td>{$vo.coupon_starttime}</td>
+    <td>{$vo.coupon_sendtime}</td>
+    <td>{$vo.create_time}</td>
+    <td><a href="{:URL('index/discount_delete')}?id={$vo.id}">删除</a></td>
+    <!--<td>{$vo.coupon_stauts}</td>-->
+
+  </tr>
+    {/volist}
+
+ </table>
